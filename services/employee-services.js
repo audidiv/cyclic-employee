@@ -83,7 +83,7 @@ async function updateEmployee(req, res) {
                 salary: salary,
                 age: age,
             }
-            if(result.rows.length == 0) return res.status(400).send({
+            if(result.rowCount.length == 0) return res.status(400).send({
                 status: "error",
                 message: "Not Found Record",
                 code: 400,
